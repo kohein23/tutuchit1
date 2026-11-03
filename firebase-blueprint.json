@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "CoupleProject": {
+      "title": "CoupleProject",
+      "description": "Customized apology website for a couple",
+      "type": "object",
+      "properties": {
+        "slug": { "type": "string", "description": "Unique URL slug for public link" },
+        "clientName": { "type": "string", "description": "Couple names or title" },
+        "note": { "type": "string", "description": "Internal order note or phone number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "home": { "type": "object" },
+        "messedUp": { "type": "object" },
+        "hitReset": { "type": "object" },
+        "pinkyPromise": { "type": "object" },
+        "pullPromise": { "type": "object" },
+        "apologyLetter": { "type": "object" },
+        "stillUs": { "type": "object" }
+      },
+      "required": ["slug", "clientName"]
+    }
+  },
+  "firestore": {
+    "/couples/{coupleId}": {
+      "schema": "CoupleProject",
+      "description": "Customized couple apology configurations"
+    }
+  }
+}

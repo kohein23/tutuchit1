@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /couples/{coupleId} {
+      // Anyone with the public link can read the custom couple experience
+      allow read: if true;
+      // Authenticated admin can create, update, or delete
+      allow write: if request.auth != null;
+    }
+  }
+}

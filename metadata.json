@@ -1,0 +1,6 @@
+{
+  "name": "TuTuChit",
+  "description": "A heartfelt interactive mobile-friendly web experience to apologize and comfort a loved one.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
